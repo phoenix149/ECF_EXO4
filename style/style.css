@@ -1,0 +1,236 @@
+/* CSS Général pour les ecrans de plus 992px */
+
+/* Reinitialise toute les marges et les padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Pokemon_Solid";
+    src:
+        local("Pokemon_Solid"),
+        url("../font/Pokemon_Solid.ttf"),
+
+}
+
+body {
+    background-color: #5d595a;
+}
+
+header {
+    width: 80vw;
+    height: 10vh;
+}
+
+main {
+    border: white 4px solid;
+    padding-top: 3vh;
+    border-radius: 10px;
+    width: 80vw;
+    background-color: #4e5359;
+    height: 75vh;
+    margin-top: 10vh;
+}
+
+#title {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    /* text-shadow: 2px 2px 0 white, -2px 2px 0 white, 2px -2px 0 white,
+    -2px -2px 0 white; */
+    font-family: Pokemon_Solid;
+    text-align: center;
+    margin-bottom: 6vh;
+    margin-top: 2vh;
+    color: #ff4d38;
+    font-size: 3.0em;
+}
+
+#navSearch {
+    border: white 4px solid;
+    border-radius: 10px;
+    background-color: #4e5359;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: #ff4d38;
+}
+
+#searchChamp {
+    border-radius: 10px;
+    color: white;
+    width: 35vw;
+    background-color: #bb2d3b;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+#searchChamp::placeholder {
+    padding-left: 10px;
+    color: white;
+}
+
+#searchamp::content {
+    background-color: #bb2d3b;
+}
+
+#searchamp,
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: #bb2d3b;
+    border: white 1px solid;
+}
+
+#form {
+    margin-right: 15vw;
+}
+
+/* ------------------------------------------------POKEMON CARD------------------------------------------------------- */
+#pokemonCard {
+    background-color: #706c6d;
+    width: 45vw;
+    height: 69vh;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+}
+
+#titlePokemon {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    font-size: 2.5em;
+    font-family: Pokemon_Solid;
+    color: #3b6f71;
+    text-align: center;
+}
+
+#captureTauxTitle {
+    background: linear-gradient(to right, #3b6f71, #353334);
+    width: 40vw;
+    margin-top: 4vh;
+    text-align: center;
+    color: white;
+}
+
+#familyPokemon {
+    margin-top: 2vh;
+    color: white;
+    text-align: center;
+    margin-bottom: 7vh;
+}
+
+#descTop {
+    margin-left: 1vw;
+    width: 22vw;
+    color: white;
+    font-size: 15pt;
+}
+
+#descBot {
+    color: white;
+    margin-left: 1vw;
+    width: 22vw;
+    font-size: 15pt;
+}
+
+#botArticle {
+    position: absolute;
+    display: flex;
+}
+
+#logoContenant {
+    background-size: 70%;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 992px) {
+    main {
+        border: white 4px solid;
+        padding-top: 6vh;
+        border-radius: 10px;
+        width: 80vw;
+        background-color: #4e5359;
+        height: 75vh;
+        margin-top: 10vh;
+    }
+
+    #descTop {
+        margin-left: 1vw;
+        width: 22vw;
+        color: white;
+        font-size: 9pt;
+    }
+
+    #descBot {
+        color: white;
+        margin-left: 1vw;
+        width: 22vw;
+        font-size: 9pt;
+    }
+
+    #pokemonCard {
+        background-color: #706c6d;
+        width: 45vw;
+        height: 60vh;
+        margin-left: auto;
+        margin-right: auto;
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+    main {
+        border: white 4px solid;
+        padding-top: 6vh;
+        border-radius: 10px;
+        width: 80vw;
+        background-color: #4e5359;
+        height: 75vh;
+        margin-top: 15vh;
+    }
+
+    #titlePokemon {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 1.8em;
+        font-family: Pokemon_Solid;
+        color: #3b6f71;
+        text-align: center;
+    }
+
+
+#descTop {
+    margin-left: 1vw;
+    width: 22vw;
+    color: white;
+    font-size: 7.5pt;
+}
+
+#descBot {
+    color: white;
+    margin-left: 1vw;
+    width: 22vw;
+    font-size: 7.5pt;
+}
+
+#pokemonCard {
+    background-color: #706c6d;
+    width: 60vw;
+    height: 65vh;
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+}
+
+#logoContenant {
+    background-size: 100px 150px;
+    width: 200px;
+    height: 150px;
+}
+}
