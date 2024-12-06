@@ -86,8 +86,8 @@ function showPokemon(_data) {
         idPokemon2 = idPokemon;
     }
     let adresseImg = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/" + idPokemon2 + ".png";
-    logoContenant.style.width = "24vw";
-    logoContenant.style.height = "45vh";
+    // logoContenant.style.width = "24vw";
+    // logoContenant.style.height = "45vh";
     logoContenant.style.backgroundImage = `url(${adresseImg})`;
     // logoContenant.style.backgroundSize = "70%";
     logoContenant.style.backgroundRepeat = "no-repeat";

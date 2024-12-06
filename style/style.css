@@ -144,12 +144,14 @@ select:focus {
 }
 
 #logoContenant {
-    background-size: 70%;
-    object-fit: cover;
+    background-size: cover;
+    width: 20vw;
+    height: 40vh;
 }
 
 
 @media screen and (max-width: 992px) {
+   
     main {
         border: white 4px solid;
         padding-top: 6vh;
@@ -185,13 +187,18 @@ select:focus {
 }
 
 @media screen and (min-width: 300px) and (max-width: 550px) {
+    header {
+        width: 95vw;
+        height: 10vh;
+    }
     main {
         border: white 4px solid;
         padding-top: 6vh;
         border-radius: 10px;
-        width: 80vw;
+        width: 95vw;
         background-color: #4e5359;
-        height: 75vh;
+        height: 100%;
+        min-height: 700px;
         margin-top: 15vh;
     }
 
@@ -203,25 +210,31 @@ select:focus {
         color: #3b6f71;
         text-align: center;
     }
-
+    #familyPokemon {
+        margin-top: 2vh;
+        color: white;
+        text-align: center;
+        margin-bottom: 4vh;
+    }
+    
 
 #descTop {
     margin-left: 1vw;
     width: 22vw;
     color: white;
-    font-size: 7.5pt;
+    font-size: 8pt;
 }
 
 #descBot {
     color: white;
     margin-left: 1vw;
     width: 22vw;
-    font-size: 7.5pt;
+    font-size: 8pt;
 }
 
 #pokemonCard {
     background-color: #706c6d;
-    width: 60vw;
+    width: 85vw;
     height: 65vh;
     margin-left: auto;
     margin-right: auto;
@@ -229,8 +242,14 @@ select:focus {
 }
 
 #logoContenant {
-    background-size: 100px 150px;
-    width: 200px;
-    height: 150px;
+    
+    background-size: cover;
+    width: 45vw;
+    height: 22vh;    
+}
+#searchChamp::placeholder {
+    padding-left: 0px;
+    font-size: 10pt;
+    color: white;
 }
 }
