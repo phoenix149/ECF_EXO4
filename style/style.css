@@ -10,19 +10,19 @@
     font-family: "Pokemon_Solid";
     src:
         local("Pokemon_Solid"),
-        url("../font/Pokemon_Solid.ttf"),
+        url("../font/Pokemon_Solid.ttf");
 
 }
-
+/* Je définis la couleur de fond du corps de la page */
 body {
     background-color: #5d595a;
 }
-
+/* Je définis la largeur et la hauteur de l'en-tête */
 header {
     width: 80vw;
     height: 10vh;
 }
-
+/* Je configure le style de mon main */
 main {
     border: white 4px solid;
     padding-top: 3vh;
@@ -30,9 +30,9 @@ main {
     width: 80vw;
     background-color: #4e5359;
     height: 75vh;
-    margin-top: 10vh;
+    margin-top: 25vh;
 }
-
+/* Je configure le style de mon titre */
 #title {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
@@ -45,7 +45,7 @@ main {
     color: #ff4d38;
     font-size: 3.0em;
 }
-
+/* Je configure ma navbar */
 #navSearch {
     border: white 4px solid;
     border-radius: 10px;
@@ -59,38 +59,39 @@ main {
 .navbar-brand:hover {
     color: #ff4d38;
 }
-
+/* Je configure le champ de recherche de ma navbar*/
 #searchChamp {
     border-radius: 10px;
     color: white;
-    width: 35vw;
+    width: 30vw;
     background-color: #bb2d3b;
     padding-left: 20px;
     margin-right: 10px;
 }
-
+/* Je modifie le placeholder de mon champ de recherche */
 #searchChamp::placeholder {
     padding-left: 10px;
     color: white;
 }
 
-#searchamp::content {
+#searChamp::content {
     background-color: #bb2d3b;
 }
 
-#searchamp,
+#searChamp,
 input:focus,
 textarea:focus,
 select:focus {
     background-color: #bb2d3b;
     border: white 1px solid;
 }
-
+/* Je définis la marge du formulaire */
 #form {
     margin-right: 15vw;
 }
 
 /* ------------------------------------------------POKEMON CARD------------------------------------------------------- */
+/* Je configure la carte du pokemon là où s'afficheront toutes les infos du pokémon */
 #pokemonCard {
     background-color: #706c6d;
     width: 45vw;
@@ -99,7 +100,7 @@ select:focus {
     margin-right: auto;
     visibility: hidden;
 }
-
+/* Je configure le nom du Pokémon */
 #titlePokemon {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
@@ -108,7 +109,7 @@ select:focus {
     color: #3b6f71;
     text-align: center;
 }
-
+/* Je configure la partie taux de capture */
 #captureTauxTitle {
     background: linear-gradient(to right, #3b6f71, #353334);
     width: 40vw;
@@ -116,40 +117,41 @@ select:focus {
     text-align: center;
     color: white;
 }
-
+/* Je configure l'affichage de la partie famille du pokémon*/
 #familyPokemon {
     margin-top: 2vh;
     color: white;
     text-align: center;
     margin-bottom: 7vh;
 }
-
+/* Je configure les descriptions */
 #descTop {
     margin-left: 1vw;
     width: 22vw;
     color: white;
-    font-size: 15pt;
+    font-size: 10pt;
 }
 
 #descBot {
     color: white;
     margin-left: 1vw;
     width: 22vw;
-    font-size: 15pt;
+    font-size: 10pt;
 }
-
+/* Je configure la section inférieure de l'article */
 #botArticle {
     position: absolute;
     display: flex;
+    object-fit: contain;
 }
-
+/* Je configure l'image du pokemon */
 #logoContenant {
-    background-size: cover;
-    width: 20vw;
-    height: 40vh;
+    background-size: contain;
+    width: 25vw;
+    height: 35vh;
 }
 
-
+/* 
 @media screen and (max-width: 992px) {
    
     main {
@@ -184,16 +186,188 @@ select:focus {
         margin-right: auto;
         visibility: hidden;
     }
-}
-
-@media screen and (min-width: 300px) and (max-width: 550px) {
+} */
+ /* Règles de media query pour différents écrans */ /* ------------------------------------------------------- */
+@media screen and (min-width: 801px) and (max-width: 1000px) {
     header {
         width: 95vw;
         height: 10vh;
     }
+
     main {
         border: white 4px solid;
         padding-top: 6vh;
+        border-radius: 10px;
+        width: 95vw;
+        background-color: #4e5359;
+        height: 100%;
+        min-height: 700px;
+        margin-top: 15vh;
+    }
+
+    #titlePokemon {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        margin-top: 3vh;
+        font-size: 1.8em;
+        font-family: Pokemon_Solid;
+        color: #3b6f71;
+        text-align: center;
+    }
+
+    #familyPokemon {
+        margin-top: 2vh;
+        color: white;
+        text-align: center;
+        margin-bottom: 4vh;
+    }
+
+
+    #descTop {
+        margin-left: 1vw;
+        width: 22vw;
+        color: white;
+        font-size: 8pt;
+
+    }
+
+    #descBot {
+        color: white;
+        margin-left: 1vw;
+        width: 22vw;
+        font-size: 8pt;
+
+    }
+
+    #pokemonCard {
+        background-color: #706c6d;
+        width: 85vw;
+        /* height: 68vh; */
+        height: 85vh;
+        margin-left: auto;
+        margin-right: auto;
+        visibility: hidden;
+    }
+
+    #logoContenant {
+
+        background-size: contain;
+        width: 45vw;
+        height: 45vh;
+    }
+
+    #searchChamp::placeholder {
+        padding-left: 0px;
+        font-size: 10pt;
+        color: white;
+
+    }
+
+    #captureTauxTitle {
+        background: linear-gradient(to right, #3b6f71, #353334);
+        width: 70vw;
+        margin-top: 4vh;
+
+        text-align: center;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 600px) {
+    header {
+        width: 95vw;
+        height: 10vh;
+    }
+
+    main {
+        border: white 4px solid;
+        padding-top: 6vh;
+        border-radius: 10px;
+        width: 95vw;
+        background-color: #4e5359;
+        height: 100%;
+        min-height: 700px;
+        margin-top: 15vh;
+    }
+
+    #titlePokemon {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        margin-top: 3vh;
+        font-size: 1.8em;
+        font-family: Pokemon_Solid;
+        color: #3b6f71;
+        text-align: center;
+    }
+
+    #familyPokemon {
+        margin-top: 2vh;
+        color: white;
+        text-align: center;
+        margin-bottom: 4vh;
+    }
+
+
+    #descTop {
+        margin-left: 1vw;
+        width: 22vw;
+        color: white;
+        font-size: 8pt;
+    }
+
+    #descBot {
+        color: white;
+        margin-left: 1vw;
+        width: 22vw;
+        font-size: 8pt;
+
+    }
+
+    #pokemonCard {
+        background-color: #706c6d;
+        width: 85vw;
+        /* height: 68vh; */
+        height: 85vh;
+        margin-left: auto;
+        margin-right: auto;
+        visibility: hidden;
+    }
+
+    #logoContenant {
+
+        background-size: contain;
+        width: 60vw;
+        height: 30vh;
+    }
+
+    #searchChamp::placeholder {
+        padding-left: 0px;
+        font-size: 10pt;
+        color: white;
+
+    }
+
+    #captureTauxTitle {
+        background: linear-gradient(to right, #3b6f71, #353334);
+        width: 70vw;
+        margin-top: 4vh;
+
+        text-align: center;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 270px) and (max-width: 375px) {
+
+    /*//Version Iphone se */
+    header {
+        width: 95vw;
+        height: 10vh;
+    }
+
+    main {
+        border: white 4px solid;
+        padding-top: 15vh;
         border-radius: 10px;
         width: 95vw;
         background-color: #4e5359;
@@ -211,49 +385,137 @@ select:focus {
         color: #3b6f71;
         text-align: center;
     }
+
     #familyPokemon {
         margin-top: 2vh;
         color: white;
         text-align: center;
         margin-bottom: 4vh;
     }
-    
 
-#descTop {
-    margin-left: 1vw;
-    width: 22vw;
-    color: white;
-    font-size: 8pt;
+
+    #descTop {
+        margin-left: 1vw;
+        width: 22vw;
+        color: white;
+        font-size: 8pt;
+    }
+
+    #descBot {
+        color: white;
+        margin-left: 1vw;
+        width: 22vw;
+        font-size: 8pt;
+    }
+
+    #pokemonCard {
+        background-color: #706c6d;
+        width: 85vw;
+        height: 85vh;
+        margin-left: auto;
+        margin-right: auto;
+        visibility: hidden;
+    }
+
+    #logoContenant {
+
+        background-size: contain;
+        width: 48vw;
+        height: 28vh;
+    }
+
+    #searchChamp::placeholder {
+        padding-left: 0px;
+        font-size: 10pt;
+        color: white;
+
+    }
+
+    #captureTauxTitle {
+        background: linear-gradient(to right, #3b6f71, #353334);
+        width: 70vw;
+        margin-top: 4vh;
+
+        text-align: center;
+        color: white;
+    }
 }
 
-#descBot {
-    color: white;
-    margin-left: 1vw;
-    width: 22vw;
-    font-size: 8pt;
-}
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    header {
+        width: 95vw;
+        height: 10vh;
+    }
 
-#pokemonCard {
-    background-color: #706c6d;
-    width: 85vw;
-    height: 65vh;
-    margin-left: auto;
-    margin-right: auto;
-    visibility: hidden;
-}
+    main {
+        border: white 4px solid;
+        padding-top: 6vh;
+        border-radius: 10px;
+        width: 95vw;
+        background-color: #4e5359;
+        height: 100%;
+        min-height: 700px;
+        margin-top: 15vh;
+    }
 
-#logoContenant {
-    
-    background-size: cover;
-    width: 45vw;
-    height: 22vh;    
-}
-#searchChamp::placeholder {
-    padding-left: 0px;
-    font-size: 10pt;
-    color: white;
+    #titlePokemon {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        margin-top: 3vh;
+        font-size: 2.5em;
+        font-family: Pokemon_Solid;
+        color: #3b6f71;
+        text-align: center;
+    }
 
-}
+    #familyPokemon {
+        margin-top: 2vh;
+        color: white;
+        text-align: center;
+        margin-bottom: 4vh;
+    }
+
+
+    #descTop {
+        margin-left: 1vw;
+        width: 22vw;
+        color: white;
+        font-size: 10pt;
+
+    }
+
+    #descBot {
+        color: white;
+        margin-left: 1vw;
+        width: 22vw;
+        font-size: 10pt;
+
+    }
+
+    #pokemonCard {
+        background-color: #706c6d;
+        width: 85vw;
+        /* height: 68vh; */
+        height: 85vh;
+        margin-left: auto;
+        margin-right: auto;
+        visibility: hidden;
+    }
+
+    #logoContenant {
+
+        background-size: contain;
+        width: 55vw;
+        height: 40vh;
+    }
+
+    #searchChamp::placeholder {
+        padding-left: 0px;
+        font-size: 10pt;
+        color: white;
+
+    }
+
     #captureTauxTitle {
         background: linear-gradient(to right, #3b6f71, #353334);
         width: 70vw;
